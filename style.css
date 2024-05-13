@@ -12,8 +12,9 @@ body {
 }
 
 #coming-soon {
-  max-width: 650px;
-  margin: 80px 6.67% 0px 6.67%;
+  width: 650px;
+  /* margin: 80px 3.47% 0px 3.47%; */
+  margin-top: 80px;
   background-color: white;
 
   display: flex;
@@ -38,6 +39,7 @@ body {
   font-size: 40px;
   color: hsl(0, 0%, 59%);
   margin: 0px;
+  text-align: center;
 }
 
 span {
@@ -84,12 +86,19 @@ span {
 }
 
 #error-msg {
+  width: 650px;
+  font-size: 14px;
+  font-style: italic;
+  color: hsl(354, 100%, 66%);
+
   visibility: hidden;
+  position: absolute;
+  transform: translateX(3%) translateY(250%);
 }
 
 #illu {
-  max-width: 640px;
-  padding: 45px 0px;
+  max-width: calc(100% - 10px);
+  padding: 45px 10px;
 }
 
 #footer {
@@ -122,4 +131,37 @@ span {
 #footer-text {
   font-size: 16px;
   color: hsl(0, 0%, 59%);
+}
+
+@media (max-width: 750px) {
+  #coming-soon {
+    width: calc(100% - 100px);
+    margin: 80px 50px 0px 50px;
+  }
+
+  #error-msg {
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  #user-input {
+    flex-direction: column;
+    gap: 20px;
+    height: 120px;
+  }
+
+  #email-input {
+    width: calc(100% - 54px);
+    height: 50px;
+  }
+
+  #input-btn {
+    width: 100%;
+    height: 50px;
+  }
+
+  #error-msg {
+    text-align: center;
+  }
 }
