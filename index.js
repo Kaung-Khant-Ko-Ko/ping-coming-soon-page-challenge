@@ -6,6 +6,13 @@ $("#input-btn").click(function () {
   console.log(validate(input));
 
   if (input === "" || validate(input) === false) {
+    if (input === "") {
+      $("#error-msg").text(
+        "Whoops! It looks like you forgot to add your email"
+      );
+    } else {
+      $("#error-msg").text("Please provide a valid email address");
+    }
     item.fadeIn();
     $("#email-input").addClass("warning-box");
     if ($("body").width() < 481) {
