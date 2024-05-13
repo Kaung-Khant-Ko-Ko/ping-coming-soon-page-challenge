@@ -49,6 +49,7 @@ span {
 
 #text {
   margin: 10px 0px;
+  text-align: center;
 }
 
 #user-input {
@@ -86,14 +87,14 @@ span {
 }
 
 #error-msg {
-  width: 650px;
+  width: 625px;
+  padding-left: 25px;
   font-size: 14px;
   font-style: italic;
   color: hsl(354, 100%, 66%);
 
-  visibility: hidden;
   position: absolute;
-  transform: translateX(3%) translateY(250%);
+  transform: translateY(250%);
 }
 
 #illu {
@@ -133,6 +134,15 @@ span {
   color: hsl(0, 0%, 59%);
 }
 
+.warning-box {
+  border-color: hsl(354, 100%, 66%) !important;
+}
+
+.adjust-box {
+  height: 140px !important;
+  gap: 40px !important;
+}
+
 @media (max-width: 750px) {
   #coming-soon {
     width: calc(100% - 100px);
@@ -140,7 +150,7 @@ span {
   }
 
   #error-msg {
-    width: calc(100% - 200px);
+    width: calc(100% - 125px);
   }
 }
 
@@ -162,6 +172,8 @@ span {
   }
 
   #error-msg {
+    width: calc(100% - 100px);
+    padding-left: 0px;
     text-align: center;
   }
 }
